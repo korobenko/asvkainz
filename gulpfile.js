@@ -19,6 +19,8 @@ var js = [
     'js/slick.js',
     'js/scrollSpy.js',
     'js/header.js',
+    'js/form.js',
+    'js/map.js',
     'js/script.js'
 ];
 

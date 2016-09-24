@@ -38,6 +38,10 @@
 
     jQuery(function() {
 
+        if (jQuery('#navbar').length) {
+            ScrollSpy.init();
+        }
+
         if (jQuery('#js-home-slider').length) {
             jQuery('#js-home-slider').slick({
                 fade: true,

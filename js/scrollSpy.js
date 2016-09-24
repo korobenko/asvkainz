@@ -6,8 +6,10 @@ var ScrollSpy = {
     mass: {},
 
     init: function() {
-        this.createOffsets();
-        this.events();
+        setTimeout(function () {
+            ScrollSpy.createOffsets();
+            ScrollSpy.events();
+        }, 500);
     },
 
     createOffsets: function() {
@@ -16,7 +18,7 @@ var ScrollSpy = {
                 element = jQuery($this.data('id'));
 
             if (element.length) {
-                ScrollSpy.mass[$this.data('id')] = element.offset().top - jQuery('.header').outerHeight();
+                ScrollSpy.mass[$this.data('id')] = element.offset().top - jQuery('.header').outerHeight() - 30;
             }
         });
     },
@@ -37,16 +39,11 @@ var ScrollSpy = {
     },
 
     events: function() {
-        jQuery('#navbar').on('click', 'a', function( event ) {
+        jQuery('#navbar a').not('[data-link]').click(function( event ) {
             event.preventDefault();
 
             var $this = jQuery(this),
                 top = ScrollSpy.mass[$this.closest('li').data('id')];
-
-            if ($this.data('link') == 1) {
-                location.href = $this.attr('href');
-                return false;
-            }
 
             ScrollSpy.scrollStop = true;
 
@@ -78,8 +75,4 @@ var ScrollSpy = {
         }
     }
 
-}
-
-jQuery(function() {
-    (jQuery('#navbar').length) ? ScrollSpy.init() : false;
-});
+};

@@ -51,7 +51,7 @@
                             <a href="#" class="navbar-link">Fotos</a>
                         </li>
                         <li class="navbar-child">
-                            <a data-link="1" href="https://medium.com/" class="navbar-button">Blog</a>
+                            <a data-link href="https://medium.com/" target="_blank" class="navbar-button">Blog</a>
                         </li>
                     </ul>
                 </nav>
@@ -65,13 +65,13 @@
 <!--main!-->
 <main>
     <section id="home" class="home-section">
-    
+
     <!--home-slider!-->
     <div class="container home-slider-container">
         <div id="js-home-slider" class="home-slider">
             <!--slide!-->
             <div>
-                <section class="slider-tem" style="background: url('images/admin/home-slide-1-1200-360.jpg') no-repeat center; background-size: contain;">
+                <section class="slider-tem" style="background: url('images/admin/home-slide-1-1200-360.jpg') no-repeat center; background-size: cover;">
                     <div class="slider-caption">
                         <header>
                             <div class="slider-phone-title">
@@ -89,7 +89,7 @@
             <!--slide!-->
             <!--slide!-->
             <div>
-                <section class="slider-tem" style="background: url('images/admin/home-slide-2-1200-360.jpg') no-repeat center; background-size: contain;">
+                <section class="slider-tem" style="background: url('images/admin/home-slide-2-1200-360.jpg') no-repeat center; background-size: cover;">
                     <div class="slider-caption">
                         <header>
                             <div class="slider-phone-title">
@@ -107,7 +107,7 @@
             <!--slide!-->
             <!--slide!-->
             <div>
-                <section class="slider-tem" style="background: url('images/admin/home-slide-3-1200-360.jpg') no-repeat center; background-size: contain;">
+                <section class="slider-tem" style="background: url('images/admin/home-slide-3-1200-360.jpg') no-repeat center; background-size: cover;">
                     <div class="slider-caption">
                         <header>
                             <div class="slider-phone-title">
@@ -167,7 +167,7 @@
     <div class="container team-container">
         <div class="team-block">
             <div class="title-container">
-                <div class="title">TEAM</div>
+                <div class="title">Team</div>
             </div>
             <div class="team-list">
                 <div class="row-inline">
@@ -233,15 +233,192 @@
     </div>
 </section>
 
-    <section id="kontakt" class="section-margin">
+    <section id="kontakt" class="section-margin white">
     <div class="container">
-        kontakt
+        <div class="title-container">
+            <div class="title">Kontakt</div>
+        </div>
+        <div class="kontakt-inside">
+            <div class="row-inline">
+                <div class="col-inline-xs-4 top">
+                    <div class="kontakt-item">
+                        <div class="kontakt-item-title">UND WANN DÜRFEN WIR SIE BERATEN?</div>
+                        <div class="kontakt-sub-item">
+                            <div class="kontakt-sub-item-title">Unsere Individualtermine</div>
+                            <div class="kontakt-sub-item-description">
+                                <p>Vereinbaren Sie Ihren individuellen<br> Wunschtermin. Wir sind für Sie da.<br> Immer wenn Sie uns benötigen.</p>
+                            </div>
+                        </div>
+                        <div class="kontakt-sub-item">
+                            <div class="kontakt-sub-item-title">Unsere Öffnungszeiten</div>
+                            <div class="kontakt-sub-item-description">
+                                <p>Montag bis Freitag:</p>
+                                <p>08.00 – 18.00 Uhr</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-inline-xs-4 top">
+                    <div class="kontakt-item">
+                        <div class="kontakt-item-title">Standortinfos</div>
+                        <div class="kontakt-sub-item">
+                            <div class="kontakt-sub-item-title">Parken</div>
+                            <div class="kontakt-sub-item-description">
+                                <p>Direkt vor unserem Büro stehen freie<br> Parkmöglichkeiten in ausreichender<br> Anzahl zur Verfügung.</p>
+                            </div>
+                        </div>
+                        <div class="kontakt-sub-item">
+                            <div class="kontakt-sub-item-title">Kontaktinfo</div>
+                            <div class="kontakt-sub-item-description">
+                                <p>7071 Rust, F.W. Raiffeisenstraße 2</p>
+                                <p><a href="tel:+43 (0) 2685 6420">+43 (0) 2685 6420</a></p>
+                                <p><a href="tel:+43 (0) 2685 6420-5">+43 (0) 2685 6420-5</a></p>
+                                <p><a href="mailto:office@asvkainz.com">office@asvkainz.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-inline-xs-4 top">
+                    <div class="kontakt-item">
+                        <div class="kontakt-item-title">Vereinbare einen Termin</div>
+                        <form name="kontakt-form">
+                            <div class="form-row">
+                                <input type="text" name="name" placeholder="name">
+                            </div>
+                            <div class="form-row">
+                                <input type="tel" name="phone" placeholder="phone">
+                            </div>
+                            <div class="form-row">
+                                <input type="email" name="email" placeholder="email">
+                            </div>
+                            <div class="form-row">
+                                <textarea name="message" placeholder="message"></textarea>
+                            </div>
+                            <div class="form-row">
+                                <div class="text-center">
+                                    <button id="js-kontakt-submit" type="submit" class="submit-button">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="kontakt-form-message"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <div id="js-map" data-lat="47.800553" data-lng="16.670461" class="map"></div>
 </section>
 
-    <section id="fotos" class="section-margin">
+    <section id="fotos">
     <div class="container">
-        fotos
+        <div class="title-container">
+            <div class="title">Fotos</div>
+        </div>
+        <!--list!-->
+        <div class="fotos-list">
+            <!--row!-->
+            <div class="row-inline">
+                <div class="col-inline-xs-4 top">
+                    <section class="fotos-item">
+                        <header>
+                            <figure style="background: url('images/admin/berlin-2015.jpg') no-repeat center;">
+                                <a href="https://medium.com/asv-kainz/kundenreise-2015-berlin-f150b3883c65#.8khbt3fro" target="_blank">
+                                </a>
+                            </figure>
+                            <article>
+                                <a class="fotos-item-title" href="https://medium.com/asv-kainz/kundenreise-2015-berlin-f150b3883c65#.8khbt3fro" target="_blank">
+                                    Kundenreise 2015 - Berlin
+                                </a>
+                            </article>
+                        </header>
+                    </section>
+                </div>
+                <div class="col-inline-xs-4 top">
+                    <section class="fotos-item">
+                        <header>
+                            <figure style="background: url('images/admin/budapest-2014.jpg') no-repeat center;">
+                                <a href="https://medium.com/asv-kainz/kundenreise-2015-berlin-f150b3883c65#.8khbt3fro" target="_blank">
+                                </a>
+                            </figure>
+                            <article>
+                                <a class="fotos-item-title" href="https://medium.com/asv-kainz/kundenreise-2015-berlin-f150b3883c65#.8khbt3fro" target="_blank">
+                                    Kundenreise 2014 - Budapest
+                                </a>
+                            </article>
+                        </header>
+                    </section>
+                </div>
+                <div class="col-inline-xs-4 top">
+                    <section class="fotos-item">
+                        <header>
+                            <figure style="background: url('images/admin/krakau-2013.jpg') no-repeat center;">
+                                <a href="https://medium.com/asv-kainz/kundenreise-2015-berlin-f150b3883c65#.8khbt3fro" target="_blank">
+                                </a>
+                            </figure>
+                            <article>
+                                <a class="fotos-item-title" href="https://medium.com/asv-kainz/kundenreise-2015-berlin-f150b3883c65#.8khbt3fro" target="_blank">
+                                    Kundenreise 2013 Krakau
+                                </a>
+                            </article>
+                        </header>
+                    </section>
+                </div>
+            </div>
+            <!--row!-->
+            <!--row!-->
+            <div class="row-inline">
+                <div class="col-inline-xs-4 top">
+                    <section class="fotos-item">
+                        <header>
+                            <figure style="background: url('images/admin/muenchen-2012.jpg') no-repeat center;">
+                                <a href="https://medium.com/asv-kainz/kundenreise-2015-berlin-f150b3883c65#.8khbt3fro" target="_blank">
+                                </a>
+                            </figure>
+                            <article>
+                                <a class="fotos-item-title" href="https://medium.com/asv-kainz/kundenreise-2015-berlin-f150b3883c65#.8khbt3fro" target="_blank">
+                                    Kundenreise 2012 - Muenchen
+                                </a>
+                            </article>
+                        </header>
+                    </section>
+                </div>
+                <div class="col-inline-xs-4 top">
+                    <section class="fotos-item">
+                        <header>
+                            <figure style="background: url('images/admin/kroatien-2011.jpg') no-repeat center;">
+                                <a href="https://medium.com/asv-kainz/kundenreise-2015-berlin-f150b3883c65#.8khbt3fro" target="_blank">
+                                </a>
+                            </figure>
+                            <article>
+                                <a class="fotos-item-title" href="https://medium.com/asv-kainz/kundenreise-2015-berlin-f150b3883c65#.8khbt3fro" target="_blank">
+                                    Kundenreise 2011 - Kroatien
+                                </a>
+                            </article>
+                        </header>
+                    </section>
+                </div>
+                <div class="col-inline-xs-4 top">
+                    <section class="fotos-item">
+                        <header>
+                            <figure style="background: url('images/admin/prag-2010.jpg') no-repeat center;">
+                                <a href="https://medium.com/asv-kainz/kundenreise-2015-berlin-f150b3883c65#.8khbt3fro" target="_blank">
+                                </a>
+                            </figure>
+                            <article>
+                                <a class="fotos-item-title" href="https://medium.com/asv-kainz/kundenreise-2015-berlin-f150b3883c65#.8khbt3fro" target="_blank">
+                                    Kundenreise 2010 - Prag
+                                </a>
+                            </article>
+                        </header>
+                    </section>
+                </div>
+            </div>
+            <!--row!-->
+        </div>
+        <!--list!-->
+        <div class="fotos-list-pagination">
+            <a href="https://medium.com/asv-kainz" class="gallery-button" target="_blank">MORE GALLERIES ON MEDIUM.COM</a>
+        </div>
     </div>
 </section>
 
@@ -251,13 +428,39 @@
 <!--footer!-->
 <footer class="footer">
     <div class="container">
-        footer
+        <div class="row-inline">
+            <div class="col-inline-xs-6 middle">
+                <div class="copyright">Copyright All Rights Reserved &copy; 2016</div>
+            </div>
+            <div class="col-inline-xs-6 middle">
+                <div class="social">
+                    <ul class="social-list">
+                        <li class="social-child">
+                            <a href="#" class="social-link fb" target="_blank"></a>
+                        </li>
+                        <li class="social-child">
+                            <a href="#" class="social-link tw" target="_blank"></a>
+                        </li>
+                        <li class="social-child">
+                            <a href="#" class="social-link gp" target="_blank"></a>
+                        </li>
+                        <li class="social-child">
+                            <a href="#" class="social-link xing" target="_blank"></a>
+                        </li>
+                        <li class="social-child">
+                            <a href="#" class="social-link yt" target="_blank"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
 <!--footer!-->
 
-<link defer rel="stylesheet" property="stylesheet" href="build/css/all.min.css?ver=1.0.0" type="text/css"/>
-<script asyns src="build/js/all.min.js?ver=1.0.0"></script>
+<link defer rel="stylesheet" property="stylesheet" href="build/css/all.min.css?ver=1.0.1" type="text/css"/>
+<script asyns src="build/js/all.min.js?ver=1.0.1"></script>
+<script asyns src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7eApaB-RItAg7GgomOGpEuRuFzKQ9xMc"></script>
 
 </body>
 </html>
