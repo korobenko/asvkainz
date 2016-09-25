@@ -38,7 +38,11 @@
 
     jQuery(function() {
 
-        if (jQuery('#navbar').length) {
+        if (jQuery('#navbar').length && jQuery('#navbar').is(':visible')) {
+            ScrollSpy.navbar = '#navbar';
+            ScrollSpy.init();
+        } else if (jQuery('#navbar-mobile').length && jQuery('#navbar-mobile').is(':visible')) {
+            ScrollSpy.navbar = '#navbar-mobile';
             ScrollSpy.init();
         }
 

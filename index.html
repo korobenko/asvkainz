@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +11,7 @@
         <meta content="yes" name="apple-mobile-web-app-capable">
 
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" property="stylesheet" href="build/css/all.min.css?ver=1.0.2" type="text/css"/>
         <title>Asvkainz</title>
     </head>
 
@@ -20,7 +21,7 @@
 <header class="header">
     <div class="container">
         <div class="row-inline">
-            <div class="col-inline-xs-5 middle">
+            <div class="col-inline-xs-5 middle header-left">
                 <figure class="header-logo" itemscope itemtype="http://schema.org/Organization">
                     <meta itemprop="name" content="Asvkainz">
                     <meta itemprop="email" content="office@asvkainz.com">
@@ -35,19 +36,19 @@
                     <p>seit 1998</p>
                 </div>
             </div>
-            <div class="col-inline-xs-7 middle">
+            <div class="col-inline-xs-7 middle header-right">
                 <nav id="navbar">
                     <ul class="navbar-list">
-                        <li data-id="#home" class="navbar-child active">
+                        <li data-id="#home" class="navbar-child mobile-hide active">
                             <a href="#" class="navbar-link">Home</a>
                         </li>
-                        <li data-id="#team" class="navbar-child">
+                        <li data-id="#team" class="navbar-child mobile-hide">
                             <a href="#" class="navbar-link">Team</a>
                         </li>
-                        <li data-id="#kontakt" class="navbar-child">
+                        <li data-id="#kontakt" class="navbar-child mobile-hide">
                             <a href="#" class="navbar-link">Kontakt</a>
                         </li>
-                        <li data-id="#fotos" class="navbar-child">
+                        <li data-id="#fotos" class="navbar-child mobile-hide">
                             <a href="#" class="navbar-link">Fotos</a>
                         </li>
                         <li class="navbar-child">
@@ -55,11 +56,36 @@
                         </li>
                     </ul>
                 </nav>
+                <a href="https://medium.com/" target="_blank" class="navbar-button hide-desktop">Blog</a>
             </div>
         </div>
     </div>
 </header>
 <!--header!-->
+
+<!--mobile menu!-->
+<div class="mobile-menu">
+    <nav id="navbar-mobile">
+        <ul class="navbar-mobile-list">
+            <li data-id="#home" class="navbar-mobile-child active">
+                <a href="#" class="navbar-mobile-link">Home</a>
+            </li>
+            <li data-id="#team" class="navbar-mobile-child">
+                <a href="#" class="navbar-mobile-link">Team</a>
+            </li>
+            <li class="navbar-mobile-child">
+                <a data-link href="tel:+43(0)26856420" class="navbar-mobile-link"></a>
+            </li>
+            <li data-id="#kontakt" class="navbar-mobile-child">
+                <a href="#" class="navbar-mobile-link">Kontakt</a>
+            </li>
+            <li data-id="#fotos" class="navbar-mobile-child">
+                <a href="#" class="navbar-mobile-link">Fotos</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!--mobile menu!-->
 
 
 <!--main!-->
@@ -271,8 +297,8 @@
                             <div class="kontakt-sub-item-title">Kontaktinfo</div>
                             <div class="kontakt-sub-item-description">
                                 <p>7071 Rust, F.W. Raiffeisenstraße 2</p>
-                                <p><a href="tel:+43 (0) 2685 6420">+43 (0) 2685 6420</a></p>
-                                <p><a href="tel:+43 (0) 2685 6420-5">+43 (0) 2685 6420-5</a></p>
+                                <p><a href="tel:+43(0)26856420">+43 (0) 2685 6420</a></p>
+                                <p><a href="tel:+43(0)26856420-5">+43 (0) 2685 6420-5</a></p>
                                 <p><a href="mailto:office@asvkainz.com">office@asvkainz.com</a></p>
                             </div>
                         </div>
@@ -363,10 +389,6 @@
                         </header>
                     </section>
                 </div>
-            </div>
-            <!--row!-->
-            <!--row!-->
-            <div class="row-inline">
                 <div class="col-inline-xs-4 top">
                     <section class="fotos-item">
                         <header>
@@ -430,9 +452,6 @@
     <div class="container">
         <div class="row-inline">
             <div class="col-inline-xs-6 middle">
-                <div class="copyright">Copyright All Rights Reserved &copy; 2016</div>
-            </div>
-            <div class="col-inline-xs-6 middle">
                 <div class="social">
                     <ul class="social-list">
                         <li class="social-child">
@@ -453,14 +472,16 @@
                     </ul>
                 </div>
             </div>
+            <div class="col-inline-xs-6 middle">
+                <div class="copyright">Copyright All Rights Reserved &copy; 2016</div>
+            </div>
         </div>
     </div>
 </footer>
 <!--footer!-->
 
-<link defer rel="stylesheet" property="stylesheet" href="build/css/all.min.css?ver=1.0.1" type="text/css"/>
-<script asyns src="build/js/all.min.js?ver=1.0.1"></script>
-<script asyns src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7eApaB-RItAg7GgomOGpEuRuFzKQ9xMc"></script>
+<script async src="build/js/all.min.js?ver=1.0.2"></script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7eApaB-RItAg7GgomOGpEuRuFzKQ9xMc"></script>
 
 </body>
 </html>

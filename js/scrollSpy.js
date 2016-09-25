@@ -3,6 +3,7 @@
 var ScrollSpy = {
 
     scrollStop: false,
+    navbar: '#navbar',
     mass: {},
 
     init: function() {
@@ -13,7 +14,7 @@ var ScrollSpy = {
     },
 
     createOffsets: function() {
-        jQuery('#navbar ul li').each(function(index, element) {
+        jQuery(ScrollSpy.navbar).find('ul li').each(function(index, element) {
             var $this = jQuery(element),
                 element = jQuery($this.data('id'));
 
@@ -32,14 +33,14 @@ var ScrollSpy = {
 
         for (var key in ScrollSpy.mass) {
             if ( pos >= ScrollSpy.mass[key]) {
-                jQuery('#navbar ul li').removeClass('active');
-                jQuery('#navbar').find('[data-id="'+key+'"]').addClass('active');
+                jQuery(ScrollSpy.navbar).find('ul li').removeClass('active');
+                jQuery(ScrollSpy.navbar).find('[data-id="'+key+'"]').addClass('active');
             }
         }
     },
 
     events: function() {
-        jQuery('#navbar a').not('[data-link]').click(function( event ) {
+        jQuery(ScrollSpy.navbar).find('a').not('[data-link]').click(function( event ) {
             event.preventDefault();
 
             var $this = jQuery(this),

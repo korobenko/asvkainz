@@ -2,7 +2,7 @@
 <header class="header">
     <div class="container">
         <div class="row-inline">
-            <div class="col-inline-xs-5 middle">
+            <div class="col-inline-xs-5 middle header-left">
                 <figure class="header-logo" itemscope itemtype="http://schema.org/Organization">
                     <meta itemprop="name" content="Asvkainz">
                     <meta itemprop="email" content="office@asvkainz.com">
@@ -17,19 +17,19 @@
                     <p>seit 1998</p>
                 </div>
             </div>
-            <div class="col-inline-xs-7 middle">
+            <div class="col-inline-xs-7 middle header-right">
                 <nav id="navbar">
                     <ul class="navbar-list">
-                        <li data-id="#home" class="navbar-child active">
+                        <li data-id="#home" class="navbar-child mobile-hide active">
                             <a href="#" class="navbar-link">Home</a>
                         </li>
-                        <li data-id="#team" class="navbar-child">
+                        <li data-id="#team" class="navbar-child mobile-hide">
                             <a href="#" class="navbar-link">Team</a>
                         </li>
-                        <li data-id="#kontakt" class="navbar-child">
+                        <li data-id="#kontakt" class="navbar-child mobile-hide">
                             <a href="#" class="navbar-link">Kontakt</a>
                         </li>
-                        <li data-id="#fotos" class="navbar-child">
+                        <li data-id="#fotos" class="navbar-child mobile-hide">
                             <a href="#" class="navbar-link">Fotos</a>
                         </li>
                         <li class="navbar-child">
@@ -37,8 +37,33 @@
                         </li>
                     </ul>
                 </nav>
+                <a href="https://medium.com/" target="_blank" class="navbar-button hide-desktop">Blog</a>
             </div>
         </div>
     </div>
 </header>
 <!--header!-->
+
+<!--mobile menu!-->
+<div class="mobile-menu">
+    <nav id="navbar-mobile">
+        <ul class="navbar-mobile-list">
+            <li data-id="#home" class="navbar-mobile-child active">
+                <a href="#" class="navbar-mobile-link">Home</a>
+            </li>
+            <li data-id="#team" class="navbar-mobile-child">
+                <a href="#" class="navbar-mobile-link">Team</a>
+            </li>
+            <li class="navbar-mobile-child">
+                <a data-link href="tel:+43(0)26856420" class="navbar-mobile-link"></a>
+            </li>
+            <li data-id="#kontakt" class="navbar-mobile-child">
+                <a href="#" class="navbar-mobile-link">Kontakt</a>
+            </li>
+            <li data-id="#fotos" class="navbar-mobile-child">
+                <a href="#" class="navbar-mobile-link">Fotos</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!--mobile menu!-->
