@@ -5,7 +5,7 @@ $phone = trim(htmlspecialchars(addslashes($_POST['phone'])));
 $email  = trim(htmlspecialchars(addslashes($_POST['email'])));
 $message = trim(htmlspecialchars(addslashes($_POST['message'])));
 
-$to = "alexkor@vis-design.com, yoyodsl@gmail.com";
+$to = "office@asvkainz.com";
 $subject = "Ask from Asvkainz";
 $text = " Name: " . $name . "\r\n Phone: " . $phone . "\r\n E-mail: " . $email  . "\r\n Message: " . $message;
 
