@@ -5,6 +5,7 @@ $link-color: #858a8f;
 $active-color: #3293f0;
 $headline-color: #000000;
 $border-color: #e8e8e8;
+$border-color-hover: #c9c9c9;
 $orange-color: #ff8a00;
 $blue-color: #00aeef;
 $border-radius: 15px;
@@ -543,36 +544,40 @@ textarea {
     &[data-id="#home"] {
         .navbar-mobile-link {
             &:before {
-                background: url('#{$image-src}/svg/home.svg') no-repeat;
-                background-size: contain;
-                background-position: center;
+                width: 20px;
+                height: 20px;
+                margin-left: -10px;
+                @include sprite(2px, -92px);
             }
         }
     }
     &[data-id="#team"] {
         .navbar-mobile-link {
             &:before {
-                background: url('#{$image-src}/svg/team.svg') no-repeat;
-                background-size: contain;
-                background-position: center;
+                width: 22px;
+                height: 20px;
+                margin-left: -11px;
+                @include sprite(-72px, -92px);
             }
         }
     }
     &[data-id="#kontakt"] {
         .navbar-mobile-link {
             &:before {
-                background: url('#{$image-src}/svg/kontakt.svg') no-repeat;
-                background-size: contain;
-                background-position: center;
+                width: 22px;
+                height: 20px;
+                margin-left: -11px;
+                @include sprite(-182px, -92px);
             }
         }
     }
     &[data-id="#fotos"] {
         .navbar-mobile-link {
             &:before {
-                background: url('#{$image-src}/svg/fotos.svg') no-repeat;
-                background-size: contain;
-                background-position: center;
+                width: 22px;
+                height: 20px;
+                margin-left: -11px;
+                @include sprite(-255px, -92px);
             }
         }
     }
@@ -580,24 +585,19 @@ textarea {
 .navbar-mobile-link {
     position: relative;
     display: inline-block;
-    padding: 25px 0 0;
+    padding: 22px 0 0;
     text-decoration: none;
     &:before {
         content: '';
         position: absolute;
         top: 0;
         left: 50%;
-        width: 20px;
-        height: 20px;
-        margin-left: -10px;
     }
     &[data-link] {
         padding: 0;
-        width: 30px;
-        height: 30px;
-        background: url('#{$image-src}/svg/phone.svg') no-repeat;
-        background-size: contain;
-        background-position: center;
+        width: 34px;
+        height: 34px;
+        @include sprite(-121px, -92px);
         &:before {
             display: none;
         }
@@ -647,13 +647,11 @@ textarea {
     &:before {
         content: '';
         position: absolute;
-        top: 0;
+        top: 2px;
         left: 0;
-        width: 18px;
-        height: 25px;
-        background: url('#{$image-src}/svg/phone-icon.svg') no-repeat;
-        background-size: contain;
-        background-position: center;
+        width: 16px;
+        height: 22px;
+        @include sprite(2px, -136px);
     }
 }
 .slider-phone-value {
@@ -816,6 +814,9 @@ textarea {
     @include transition(box-shadow);
     overflow: hidden;
     box-shadow: 0px 1px 3px #f3f4f4;
+    &:hover {
+        border-color: $border-color-hover;
+    }
     figure {
         position: relative;
         font-size: 0;
@@ -857,7 +858,7 @@ textarea {
 /*---------Footer---------*/
 .footer-inside {
     position: relative;
-    padding: 25px 0;
+    padding: 23px 0;
     background: #20609d;
     .social {
         text-align: right;
@@ -887,46 +888,73 @@ textarea {
     vertical-align: middle;
     font-size: 0;
     line-height: 1;
-    margin-right: 40px;
+    margin-right: 30px;
     &:last-child {
         margin-right: 0;
     }
 }
 .social-link {
+    position: relative;
     display: inline-block;
     vertical-align: middle;
     font-size: 0;
     line-height: 1;
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 30px;
     @include transition(opacity);
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
     &:hover {
         opacity: 0.75;
     }
     &.fb {
-        background: url('#{$image-src}/svg/facebook-logo.svg') no-repeat;
-        background-size: contain;
-        background-position: center;
+        &:before {
+            width: 16px;
+            height: 30px;
+            margin-top: -15px;
+            margin-left: -8px;
+            @include sprite(0px, 2px);
+        }
     }
     &.tw {
-        background: url('#{$image-src}/svg/twitter.svg') no-repeat;
-        background-size: contain;
-        background-position: center;
+        &:before {
+            width: 30px;
+            height: 30px;
+            margin-top: -15px;
+            margin-left: -15px;
+            @include sprite(-58px, 2px);
+        }
     }
     &.gp {
-        background: url('#{$image-src}/svg/google-plus.svg') no-repeat;
-        background-size: contain;
-        background-position: center;
+        &:before {
+            width: 40px;
+            height: 30px;
+            margin-top: -15px;
+            margin-left: -20px;
+            @include sprite(-120px, 2px);
+        }
     }
     &.xing {
-        background: url('#{$image-src}/svg/xing-logotype.svg') no-repeat;
-        background-size: contain;
-        background-position: center;
+        &:before {
+            width: 26px;
+            height: 30px;
+            margin-top: -15px;
+            margin-left: -13px;
+            @include sprite(-182px, 2px);
+        }
     }
     &.yt {
-        background: url('#{$image-src}/svg/youtube-logo.svg') no-repeat;
-        background-size: contain;
-        background-position: center;
+        &:before {
+            width: 26px;
+            height: 30px;
+            margin-top: -15px;
+            margin-left: -13px;
+            @include sprite(-244px, 2px);
+        }
     }
 }
 /*---------Footer---------*/
@@ -1026,10 +1054,6 @@ textarea {
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 20px;
-        height: 18px;
-        margin-top: -9px;
-        margin-left: -10px;
     }
     &.fb {
         background-color: #3b5999;
@@ -1037,9 +1061,11 @@ textarea {
             background-color: #314b81;
         }
         &:before {
-            background: url('#{$image-src}/svg/facebook-logo-white.svg') no-repeat;
-            background-size: contain;
-            background-position: center;
+            width: 10px;
+            height: 20px;
+            margin-top: -10px;
+            margin-left: -5px;
+            @include sprite(0px, -49px);
         }
     }
     &.tw {
@@ -1048,9 +1074,11 @@ textarea {
             background-color: #27bfd1;
         }
         &:before {
-            background: url('#{$image-src}/svg/twitter-white.svg') no-repeat;
-            background-size: contain;
-            background-position: center;
+            width: 22px;
+            height: 20px;
+            margin-top: -10px;
+            margin-left: -11px;
+            @include sprite(-34px, -50px);
         }
     }
     &.gp {
@@ -1059,9 +1087,11 @@ textarea {
             background-color: #ce4f45;
         }
         &:before {
-            background: url('#{$image-src}/svg/google-plus-white.svg') no-repeat;
-            background-size: contain;
-            background-position: center;
+            width: 28px;
+            height: 20px;
+            margin-top: -10px;
+            margin-left: -14px;
+            @include sprite(-72px, -50px);
         }
     }
 }

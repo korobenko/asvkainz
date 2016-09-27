@@ -434,42 +434,51 @@ textarea {
   .navbar-mobile-child.active .navbar-mobile-link {
     color: #000000; }
   .navbar-mobile-child[data-id="#home"] .navbar-mobile-link:before {
-    background: url("../../images/svg/home.svg") no-repeat;
-    background-size: contain;
-    background-position: center; }
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    background: url("../../images/sprite.svg");
+    background-repeat: no-repeat;
+    background-position: 2px -92px; }
   .navbar-mobile-child[data-id="#team"] .navbar-mobile-link:before {
-    background: url("../../images/svg/team.svg") no-repeat;
-    background-size: contain;
-    background-position: center; }
+    width: 22px;
+    height: 20px;
+    margin-left: -11px;
+    background: url("../../images/sprite.svg");
+    background-repeat: no-repeat;
+    background-position: -72px -92px; }
   .navbar-mobile-child[data-id="#kontakt"] .navbar-mobile-link:before {
-    background: url("../../images/svg/kontakt.svg") no-repeat;
-    background-size: contain;
-    background-position: center; }
+    width: 22px;
+    height: 20px;
+    margin-left: -11px;
+    background: url("../../images/sprite.svg");
+    background-repeat: no-repeat;
+    background-position: -182px -92px; }
   .navbar-mobile-child[data-id="#fotos"] .navbar-mobile-link:before {
-    background: url("../../images/svg/fotos.svg") no-repeat;
-    background-size: contain;
-    background-position: center; }
+    width: 22px;
+    height: 20px;
+    margin-left: -11px;
+    background: url("../../images/sprite.svg");
+    background-repeat: no-repeat;
+    background-position: -255px -92px; }
 
 .navbar-mobile-link {
   position: relative;
   display: inline-block;
-  padding: 25px 0 0;
+  padding: 22px 0 0;
   text-decoration: none; }
   .navbar-mobile-link:before {
     content: '';
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    margin-left: -10px; }
+    left: 50%; }
   .navbar-mobile-link[data-link] {
     padding: 0;
-    width: 30px;
-    height: 30px;
-    background: url("../../images/svg/phone.svg") no-repeat;
-    background-size: contain;
-    background-position: center; }
+    width: 34px;
+    height: 34px;
+    background: url("../../images/sprite.svg");
+    background-repeat: no-repeat;
+    background-position: -121px -92px; }
     .navbar-mobile-link[data-link]:before {
       display: none; }
 
@@ -516,13 +525,13 @@ textarea {
   .slider-phone-label:before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 2px;
     left: 0;
-    width: 18px;
-    height: 25px;
-    background: url("../../images/svg/phone-icon.svg") no-repeat;
-    background-size: contain;
-    background-position: center; }
+    width: 16px;
+    height: 22px;
+    background: url("../../images/sprite.svg");
+    background-repeat: no-repeat;
+    background-position: 2px -136px; }
 
 .slider-phone-value {
   padding: 20px 0 0;
@@ -666,6 +675,8 @@ textarea {
   transition: box-shadow 0.3s ease 0s;
   overflow: hidden;
   box-shadow: 0px 1px 3px #f3f4f4; }
+  .fotos-item:hover {
+    border-color: #c9c9c9; }
   .fotos-item figure {
     position: relative;
     font-size: 0;
@@ -704,7 +715,7 @@ textarea {
 /*---------Footer---------*/
 .footer-inside {
   position: relative;
-  padding: 25px 0;
+  padding: 23px 0;
   background: #20609d; }
   .footer-inside .social {
     text-align: right; }
@@ -729,41 +740,67 @@ textarea {
   vertical-align: middle;
   font-size: 0;
   line-height: 1;
-  margin-right: 40px; }
+  margin-right: 30px; }
   .social-child:last-child {
     margin-right: 0; }
 
 .social-link {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   font-size: 0;
   line-height: 1;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 30px;
   -webkit-transition: opacity 0.3s ease 0s;
   transition: opacity 0.3s ease 0s; }
+  .social-link:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%; }
   .social-link:hover {
     opacity: 0.75; }
-  .social-link.fb {
-    background: url("../../images/svg/facebook-logo.svg") no-repeat;
-    background-size: contain;
-    background-position: center; }
-  .social-link.tw {
-    background: url("../../images/svg/twitter.svg") no-repeat;
-    background-size: contain;
-    background-position: center; }
-  .social-link.gp {
-    background: url("../../images/svg/google-plus.svg") no-repeat;
-    background-size: contain;
-    background-position: center; }
-  .social-link.xing {
-    background: url("../../images/svg/xing-logotype.svg") no-repeat;
-    background-size: contain;
-    background-position: center; }
-  .social-link.yt {
-    background: url("../../images/svg/youtube-logo.svg") no-repeat;
-    background-size: contain;
-    background-position: center; }
+  .social-link.fb:before {
+    width: 16px;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -8px;
+    background: url("../../images/sprite.svg");
+    background-repeat: no-repeat;
+    background-position: 0px 2px; }
+  .social-link.tw:before {
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -15px;
+    background: url("../../images/sprite.svg");
+    background-repeat: no-repeat;
+    background-position: -58px 2px; }
+  .social-link.gp:before {
+    width: 40px;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -20px;
+    background: url("../../images/sprite.svg");
+    background-repeat: no-repeat;
+    background-position: -120px 2px; }
+  .social-link.xing:before {
+    width: 26px;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -13px;
+    background: url("../../images/sprite.svg");
+    background-repeat: no-repeat;
+    background-position: -182px 2px; }
+  .social-link.yt:before {
+    width: 26px;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -13px;
+    background: url("../../images/sprite.svg");
+    background-repeat: no-repeat;
+    background-position: -244px 2px; }
 
 /*---------Footer---------*/
 /*---------Page---------*/
@@ -861,35 +898,43 @@ textarea {
     content: '';
     position: absolute;
     top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 18px;
-    margin-top: -9px;
-    margin-left: -10px; }
+    left: 50%; }
   .page-share-link.fb {
     background-color: #3b5999; }
     .page-share-link.fb:hover {
       background-color: #314b81; }
     .page-share-link.fb:before {
-      background: url("../../images/svg/facebook-logo-white.svg") no-repeat;
-      background-size: contain;
-      background-position: center; }
+      width: 10px;
+      height: 20px;
+      margin-top: -10px;
+      margin-left: -5px;
+      background: url("../../images/sprite.svg");
+      background-repeat: no-repeat;
+      background-position: 0px -49px; }
   .page-share-link.tw {
     background-color: #59d1df; }
     .page-share-link.tw:hover {
       background-color: #27bfd1; }
     .page-share-link.tw:before {
-      background: url("../../images/svg/twitter-white.svg") no-repeat;
-      background-size: contain;
-      background-position: center; }
+      width: 22px;
+      height: 20px;
+      margin-top: -10px;
+      margin-left: -11px;
+      background: url("../../images/sprite.svg");
+      background-repeat: no-repeat;
+      background-position: -34px -50px; }
   .page-share-link.gp {
     background-color: #ec5b4f; }
     .page-share-link.gp:hover {
       background-color: #ce4f45; }
     .page-share-link.gp:before {
-      background: url("../../images/svg/google-plus-white.svg") no-repeat;
-      background-size: contain;
-      background-position: center; }
+      width: 28px;
+      height: 20px;
+      margin-top: -10px;
+      margin-left: -14px;
+      background: url("../../images/sprite.svg");
+      background-repeat: no-repeat;
+      background-position: -72px -50px; }
 
 .additional-pages {
   padding: 0 0 45px; }
