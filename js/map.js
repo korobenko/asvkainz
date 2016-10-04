@@ -3,7 +3,7 @@
 function loadMap(element) {
     var myLatlng = new google.maps.LatLng(jQuery(element).data('lat'), jQuery(element).data('lng'));
     var mapOptions = {
-        zoom: 15,
+        zoom: 17,
         scrollwheel: false,
         center: myLatlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP

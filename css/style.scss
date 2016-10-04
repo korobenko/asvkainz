@@ -15,19 +15,19 @@ $font-src: '../../fonts';
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('#{$font-src}/Open_Sans/OpenSans-Light.ttf');
+    src: url('#{$font-src}/opensans/opensans-300-normal.woff2') format('woff2'), url('#{$font-src}/opensans/opensans-300-normal.woff') format('woff'), url('#{$font-src}/opensans/opensans-300-normal.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: 'Open Sans';
-    src: url('#{$font-src}/Open_Sans/OpenSans-Regular.ttf');
+    src: url('#{$font-src}/opensans/opensans-400-normal.woff2') format('woff2'), url('#{$font-src}/opensans/opensans-400-normal.woff') format('woff'), url('#{$font-src}/opensans/opensans-400-normal.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: 'Open Sans';
-    src: url('#{$font-src}/Open_Sans/OpenSans-Bold.ttf');
+    src: url('#{$font-src}/opensans/opensans-700-normal.woff2') format('woff2'), url('#{$font-src}/opensans/opensans-700-normal.woff') format('woff'), url('#{$font-src}/opensans/opensans-700-normal.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
@@ -99,6 +99,40 @@ $font-src: '../../fonts';
 }
 
 /*---------Customs---------*/
+html {
+    font-family: "Segoe UI", Geneva, Arial, Helvetica, serif;
+}
+.fonts-loading body {
+    visibility: hidden;
+}
+.fonts-loaded body,
+.fonts-failed body {
+    visibility: visible;
+}
+.fonts-loaded {
+    @include font-normal;
+    .submit-button,
+    ::-webkit-input-placeholder,
+    ::-moz-placeholder,
+    ::-ms-input-placeholder {
+        @include font-normal;
+    }
+    h1,
+    .title,
+    .header-logo-caption,
+    .slider-caption article,
+    .slider-phone-label,
+    .fotos-item-title {
+        @include font-light;
+    }
+    h2,h3,h4,h5,h6,
+    b, strong,
+    .article table th {
+        @include font-bold;
+    }
+}
+
+
 html,
 body {
     position: relative;
@@ -122,7 +156,6 @@ body {
     height: 100%;
     color: $primary-color;
     background: #fafafa;
-    @include font-normal;
 }
 .header,
 .footer {
@@ -183,15 +216,10 @@ a {
 h1,h2,h3,h4,h5,h6 {
   color: $headline-color;
   margin: 0;
-  @include font-bold;
 }
 h1 {
     font-size: 2rem;
     line-height: 1;
-    @include font-light;
-}
-b, strong {
-    @include font-bold;
 }
 .fixed {
   width: 100%;
@@ -254,7 +282,6 @@ section {
     line-height: 1;
     text-transform: uppercase;
     color: $active-color;
-    @include font-light;
     &:before {
         content: '';
         position: absolute;
@@ -311,20 +338,17 @@ textarea {
     color:#c9c9c9;
     text-overflow: ellipsis;
     text-transform: uppercase;
-    @include font-normal;
 }
 ::-moz-placeholder {
     color:#c9c9c9;
     text-overflow:
     ellipsis; opacity: 1;
     text-transform: uppercase;
-    @include font-normal;
 }
 ::-ms-input-placeholder {
     color:#c9c9c9;
     text-overflow: ellipsis;
     text-transform: uppercase;
-    @include font-normal;
 }
 
 .transparent-button {
@@ -347,7 +371,6 @@ textarea {
     font-size: 0.875rem;
     line-height: 1.71428571;
     text-transform: uppercase;
-    @include font-normal;
     text-decoration: none;
     outline: none;
     color: #ffffff;
@@ -442,7 +465,6 @@ textarea {
       th {
           padding: 12px 30px;
           font-size: 0.875rem;
-          @include font-bold;
       }
       tbody {
           tr {
@@ -478,7 +500,6 @@ textarea {
     vertical-align: middle;
     font-size: 0.75rem;
     line-height: 1.5;
-    @include font-light;
 }
 .navbar-list {
     list-style-type: none;
@@ -627,7 +648,6 @@ textarea {
     article {
         padding: 30px 0 0;
         font-size: 1.5rem;
-        @include font-light;
         color: #000000;
         p {
             padding: 2px 0;
@@ -642,7 +662,6 @@ textarea {
     display: inline-block;
     padding-left: 20px;
     font-size: 1.5rem;
-    @include font-light;
     text-align: center;
     color: #000000;
     &:before {
@@ -846,7 +865,6 @@ textarea {
     font-size: 0.875rem;
     line-height: 1.42;
     color: $headline-color;
-    @include font-light;
     text-decoration: none;
 }
 .fotos-list-pagination {

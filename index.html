@@ -18,7 +18,7 @@
         <meta property="og:site_name" content="Ihr Versicherungsmakler - ASV Kainz Versicherungsmakler" />
 
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" property="stylesheet" href="build/css/all.min.css?ver=1.0.6" type="text/css"/>
+        <link rel="stylesheet" property="stylesheet" href="build/css/all.min.css?ver=1.0.7" type="text/css"/>
         <title>Ihr Versicherungsmakler - ASV Kainz Versicherungsmakler</title>
     </head>
 
@@ -306,7 +306,7 @@
             </div>
         </div>
     </div>
-    <div id="js-map" data-lat="47.800553" data-lng="16.670461" class="map"></div>
+    <div id="js-map" data-lat="47.800150" data-lng="16.670500" class="map"></div>
 </section>
 
 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7eApaB-RItAg7GgomOGpEuRuFzKQ9xMc"></script>
@@ -472,7 +472,40 @@
 </footer>
 <!--footer!-->
 
-<script async src="build/js/all.min.js?ver=1.0.6"></script>
+<script src="js/fontfaceobserver.js"></script>
+
+<script>
+    var light = new FontFaceObserver('Open Sans', {
+        weight: 300
+    });
+    var normal = new FontFaceObserver('Open Sans', {
+        weight: 400
+    });
+    var bold = new FontFaceObserver('Open Sans', {
+        weight: 700
+    });
+    var html = document.documentElement;
+
+    html.classList.add('fonts-loading');
+
+    Promise.all([
+        light.load(),
+        normal.load(),
+        bold.load()
+    ]).then(function () {
+        html.classList.remove('fonts-loading');
+        html.classList.add('fonts-loaded');
+        sessionStorage.fontsLoaded = true;
+        console.log('Open Sans is loading');
+    }).catch(function () {
+        html.classList.remove('fonts-loading');
+        html.classList.add('fonts-failed');
+        sessionStorage.fontsLoaded = false;
+        console.log('Open Sans error loading');
+    });
+</script>
+
+<script async src="build/js/all.min.js?ver=1.0.7"></script>
 
 </body>
 </html>

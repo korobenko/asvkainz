@@ -47,7 +47,40 @@
 </footer>
 <!--footer!-->
 
-<script async src="build/js/all.min.js?ver=1.0.6"></script>
+<script src="js/fontfaceobserver.js"></script>
+
+<script>
+    var light = new FontFaceObserver('Open Sans', {
+        weight: 300
+    });
+    var normal = new FontFaceObserver('Open Sans', {
+        weight: 400
+    });
+    var bold = new FontFaceObserver('Open Sans', {
+        weight: 700
+    });
+    var html = document.documentElement;
+
+    html.classList.add('fonts-loading');
+
+    Promise.all([
+        light.load(),
+        normal.load(),
+        bold.load()
+    ]).then(function () {
+        html.classList.remove('fonts-loading');
+        html.classList.add('fonts-loaded');
+        sessionStorage.fontsLoaded = true;
+        console.log('Open Sans is loading');
+    }).catch(function () {
+        html.classList.remove('fonts-loading');
+        html.classList.add('fonts-failed');
+        sessionStorage.fontsLoaded = false;
+        console.log('Open Sans error loading');
+    });
+</script>
+
+<script async src="build/js/all.min.js?ver=1.0.7"></script>
 
 </body>
 </html>
