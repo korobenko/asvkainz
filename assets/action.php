@@ -6,8 +6,8 @@ $email  = trim(htmlspecialchars(addslashes($_POST['email'])));
 $message = trim(htmlspecialchars(addslashes($_POST['message'])));
 
 $to = "office@asvkainz.com";
-$subject = "Ask from Asvkainz";
-$text = " Name: " . $name . "\r\n Phone: " . $phone . "\r\n E-mail: " . $email  . "\r\n Message: " . $message;
+$subject = "Ask from ASV Kainz";
+$text = " Name: " . $name . "\r\n Telefon: " . $phone . "\r\n E-mail: " . $email  . "\r\n Nachricht: " . $message;
 
 
 $from = "Contact-form";
