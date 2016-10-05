@@ -658,7 +658,8 @@ textarea {
   padding: 20px 0 0; }
 
 #kontakt-form-message {
-  display: none; }
+  display: none;
+  text-align: center; }
 
 .map {
   margin: 10px 0 0;

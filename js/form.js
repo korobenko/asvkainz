@@ -20,14 +20,14 @@ jQuery(function () {
         if (!name || !email || !phone)
         {
             jQuery('#kontakt-form-message').show();
-            jQuery('#kontakt-form-message').html('<font color="red">Error empty field(s)</font>');
+            jQuery('#kontakt-form-message').html('<font color="red">Bitte füllen Sie alle felder aus!</font>');
             return false;
         }
 
         if (!isValidEmailAddress(email))
         {
             jQuery('#kontakt-form-message').show();
-            jQuery('#kontakt-form-message').html('<font color="red">Incorrect email!</font>');
+            jQuery('#kontakt-form-message').html('<font color="red">Falsche Email!</font>');
             return false;
         }
 
@@ -36,7 +36,7 @@ jQuery(function () {
             {
                 jQuery('form[name="kontakt-form"]').reset();
                 jQuery('#kontakt-form-message').show();
-                jQuery('#kontakt-form-message').html('<font color="red">Your message has been sent. Thank you!</font>');
+                jQuery('#kontakt-form-message').html('<font color="green">Ihre Nachricht wurde gesendet. Vielen Dank!</font>');
 
                 setTimeout(function () {
                     jQuery('#kontakt-form-message').empty().hide();
